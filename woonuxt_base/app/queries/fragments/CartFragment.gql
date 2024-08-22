@@ -1,4 +1,4 @@
-fragment CartFragment on Cart {
+fragment Cart on Cart {
   total
   rawTotal: total(format: RAW)
   subtotal
@@ -36,6 +36,7 @@ fragment CartFragment on Cart {
           type
           ...SimpleProduct
           ...VariableProduct
+          ...ExternalProduct
         }
       }
       variation {
