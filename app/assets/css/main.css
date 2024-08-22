@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .image-hover {
+    @apply z-10 bg-transparent hover:bg-gray-500/10 transform transition-all duration-200;
+  }
+}
+
+:root {
+  font-family: 'Poppins', Helvetica, Open sans, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--ui-foreground);
+  font-weight: 500;
+}
+h1,
+.prose h1 {
+  font-size: 1.313em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+h2,
+.prose h2 {
+  font-size: 1.313em;
+  line-height: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+h3,
+.prose h3 {
+  font-size: 1.7em;
+  line-height: 1.4em;
+  font-weight: 300;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+h4,
+.prose h4 {
+  color: #707070;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.prose a {
+  font-weight: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 125, 125, 0);
+}
+.prose a:hover {
+  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+  transition: border 0.5s ease-in-out;
+}
+
+img.floatRight {
+  float: right;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  max-width: 50%;
+}
+
+
+.navbarTogglerActive > span:nth-child(1) {
+  @apply transform rotate-45 top-[7px];
+}
+.navbarTogglerActive > span:nth-child(2) {
+  @apply opacity-0;
+}
+.navbarTogglerActive > span:nth-child(3) {
+  @apply transform top-[-8px] rotate-[135deg];
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background-color: #DCD8D1;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+
+#sb_instagram .sbi_follow_btn a {
+  @apply !text-white !rounded-lg !font-medium !bg-black !py-1 !px-3 !shadow-none
+}
+#sb_instagram .sbi_follow_btn a:hover {
+  @apply !shadow-md
+}
+#sb_instagram #sbi_images .sbi_inner_wrap {
+  @apply !rounded-lg !shadow-md
+}
+
+
+.content-background {
+  background-color: rgba(220, 216, 209, 0.35);
+}

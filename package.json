@@ -3,27 +3,39 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host",
+    "dev": "nuxt dev --host --port 3001",
     "dev:ssl": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "serve": "nuxi generate && npx serve .output/public -l 8080"
+    "serve": "nuxi generate && npx serve .output/public -l 8080",
+    "wp-env": "wp-env",
+    "wp-env:create": "wp-env start --update && ./wordpress/wp-env-cli.sh"
   },
   "dependencies": {
     "@stripe/stripe-js": "^4.2.0",
     "@vueform/slider": "^2.1.10",
-    "@vueuse/core": "^10.11.1"
+    "@vueuse/core": "^11.0.0"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.24",
+    "@iconify-json/ion": "^1.1.19",
+    "@iconify-json/mdi": "^1.1.68",
+    "@nuxt/eslint": "^0.5.1",
+    "@nuxt/fonts": "^0.7.2",
     "@nuxt/icon": "^1.4.5",
     "@nuxt/image": "1.7.0",
+    "@nuxt/ui-pro": "^1.4.1",
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/typography": "^0.5.14",
+    "@wordpress/env": "^10.5.0",
+    "anneleenvernaillen-base-layer": "^0.0.2",
+    "graphql-request": "6.1.0",
     "nuxt": "^3.12.4",
     "nuxt-graphql-client": "^0.2.36",
     "prettier": "^3.3.3",
+    "vite-plugin-eslint2": "^4.4.0",
     "woonuxt-settings": "^1.0.58"
   },
   "overrides": {

@@ -1,9 +1,39 @@
 export default defineNuxtConfig({
 
-  // Get all the pages, components, composables and plugins from the parent theme
-  extends: ['./woonuxt_base'],
+  extends: [
+    '@nuxt/ui-pro',
+    'anneleenvernaillen-base-layer',
+    // '../anneleenvernaillen.com/base',
+    './woonuxt_base'
+  ],
 
-  components: [{ path: './components', pathPrefix: false }],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui'
+  ],
+
+  colorMode: {
+    preference: 'light'
+  },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  wpNuxt: {
+    wordpressUrl: 'http://localhost:4000',
+  },
+
+  runtimeConfig: {
+    public: {
+      mainUrl: 'https://anneleen.vernaillen.dev',
+    }
+  },
+
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/prose.css'
+  ],
 
   /**
    * Depending on your servers capabilities, you may need to adjust the following settings.

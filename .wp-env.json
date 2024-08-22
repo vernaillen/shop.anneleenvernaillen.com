@@ -1,0 +1,19 @@
+{
+  "core": "WordPress/WordPress#6.6.1",
+  "plugins": [
+    "https://github.com/scottyzen/woonuxt-settings/releases/download/1.0.57/woonuxt-settings.zip",
+    "https://downloads.wordpress.org/plugin/wp-graphql.1.28.1.zip",
+    "https://downloads.wordpress.org/plugin/woocommerce.9.2.1.zip",
+    "https://github.com/wp-graphql/wp-graphql-woocommerce/releases/download/v0.21.0/wp-graphql-woocommerce.zip"
+  ],
+  "port": 4000,
+  "config": {
+		"FRONTEND_URI": "http://localhost:3000"
+  },
+  "mappings": {
+    "wp-cli.yml": "./wordpress/wp-env-apache-modules.yml"
+  },
+  "lifecycleScripts": {
+    "afterStart": "wp-env run cli wp rewrite structure /%postname%/ --hard"
+  }
+}
