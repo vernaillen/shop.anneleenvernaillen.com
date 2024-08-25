@@ -15,7 +15,7 @@
   "dependencies": {
     "@stripe/stripe-js": "^4.3.0",
     "@vueform/slider": "^2.1.10",
-    "@vueuse/core": "^11.0.1"
+    "@vueuse/core": "^11.0.3"
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.1.24",
@@ -23,7 +23,7 @@
     "@iconify-json/mdi": "^1.1.68",
     "@nuxt/eslint": "^0.5.1",
     "@nuxt/fonts": "^0.7.2",
-    "@nuxt/icon": "^1.4.8",
+    "@nuxt/icon": "^1.4.10",
     "@nuxt/image": "1.7.0",
     "@nuxt/ui-pro": "^1.4.1",
     "@nuxtjs/i18n": "^8.5.0",
@@ -37,7 +37,7 @@
     "prettier": "^3.3.3",
     "vite-plugin-eslint2": "^4.4.0",
     "vue3-smooth-dnd": "^0.0.6",
-    "woonuxt-settings": "^1.0.59"
+    "woonuxt-settings": "^1.0.60"
   },
   "overrides": {
     "sharp": "0.32.6"
