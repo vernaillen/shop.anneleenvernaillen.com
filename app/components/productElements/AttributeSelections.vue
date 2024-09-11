@@ -22,7 +22,7 @@ const getSelectedDescription = (activeVariation: VariationAttribute) => {
   if (variations.length) {
     return variations.find(node => {
       return node.attributes?.nodes?.length && node.attributes.nodes[0].value === activeVariation.value;
-    }).description;
+    })?.description;
   }
 
   return activeVariation.value || '';
@@ -84,6 +84,10 @@ onMounted(() => {
             </label>
           </span>
         </div>
+        <div 
+          v-if="variations && activeVariations.length" 
+          class="mt-2 text-base text-gray-500" 
+          v-html="getSelectedDescription(activeVariations[i])" />
       </div>
 
       <!-- COLOR SWATCHES -->
@@ -111,6 +115,10 @@ onMounted(() => {
             </Tooltip>
           </span>
         </div>
+        <div 
+          v-if="variations && activeVariations.length" 
+          class="mt-2 text-base text-gray-500" 
+          v-html="getSelectedDescription(activeVariations[i])" />
       </div>
 
       <!-- DROPDOWN -->
@@ -122,6 +130,10 @@ onMounted(() => {
           <option disabled hidden>{{ $t('messages.general.choose') }} {{ decodeURIComponent(attr.label) }}</option>
           <option v-for="(term, dropdownIndex) in attr.terms.nodes" :key="dropdownIndex" :value="term.slug" v-html="term.name" :selected="dropdownIndex == 0" />
         </select>
+        <div 
+          v-if="variations && activeVariations.length" 
+          class="mt-2 text-base text-gray-500" 
+          v-html="getSelectedDescription(activeVariations[i])" />
       </div>
 
       <!-- CHECKBOXES -->
