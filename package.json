@@ -32,14 +32,16 @@
     "@tailwindcss/typography": "^0.5.15",
     "@wordpress/env": "^10.6.0",
     "anneleenvernaillen-base-layer": "^0.0.5",
+    "graphql-request": "^6.1.0",
     "nuxt": "^3.13.1",
     "nuxt-graphql-client": "^0.2.36",
     "prettier": "^3.3.3",
-    "vite-plugin-eslint2": "^4.4.0",
+    "vite-plugin-eslint2": "^4.4.1",
     "vue3-smooth-dnd": "^0.0.6",
     "woonuxt-settings": "^1.0.60"
   },
   "overrides": {
-    "sharp": "0.32.6"
+    "sharp": "0.32.6",
+    "graphql-request": "6.1.0"
   }
 }
