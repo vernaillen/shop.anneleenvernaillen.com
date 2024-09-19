@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      mainUrl: 'https://anneleen.vernaillen.dev',
+      mainUrl: 'https://anneleenvernaillen.com',
     }
   },
 
